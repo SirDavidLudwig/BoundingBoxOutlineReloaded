@@ -26,7 +26,6 @@
     "client.network.login.MixinClientLoginNetHandler",
     "client.network.play.MixinClientPlayNetHandler",
     "client.renderer.MixinGameRenderer",
-    "client.settings.MixinKeyBinding",
     "client.world.MixinClientWorld",
     "network.play.server.MixinSChatPacket",
     "network.play.server.MixinSChunkDataPacket",

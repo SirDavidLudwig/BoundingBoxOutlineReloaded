@@ -25,7 +25,6 @@ public abstract class MixinGameSettings {
     @Inject(method = "<init>", at = @At("RETURN"))
     private void init(CallbackInfo ci) {
         ClientProxy.registerKeyBindings();
-        allKeys = ArrayUtils.addAll(allKeys, KeyListener.keyBindings());
         this.load();
     }
 }

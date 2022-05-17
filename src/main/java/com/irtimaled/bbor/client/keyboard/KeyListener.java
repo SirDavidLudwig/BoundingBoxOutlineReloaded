@@ -1,5 +1,6 @@
 package com.irtimaled.bbor.client.keyboard;
 
+import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
@@ -13,7 +14,7 @@ public class KeyListener {
     private static long mainWindowHandle;
     private static final Set<Key> keys = new HashSet<>();
     private static final Set<CustomKeyBinding> keyBindings = new HashSet<>();
-    public static final String Category = "Bounding Box Outline Reloaded";
+    public static final String Category = "bbor.key.category";
 
     public static void init() {
         mainWindowHandle = minecraft.getWindow().getHandle();
@@ -24,6 +25,8 @@ public class KeyListener {
         InputUtil.Key input = InputUtil.fromTranslationKey(keyName);
         CustomKeyBinding keyBinding = new CustomKeyBinding(description, input.getCode());
         keyBindings.add(keyBinding);
+
+        KeyBindingHelper.registerKeyBinding(keyBinding);
 
         Key key = keyBinding.getKey();
         keys.add(key);
