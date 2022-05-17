@@ -42,6 +42,7 @@ dependencies {
     minecraft 'com.mojang:minecraft:' + project.mcVersion
     mappings 'net.fabricmc:yarn:' + project.mcVersion + '+build.1:v2'
     modImplementation 'net.fabricmc:fabric-loader:0.13.3'
+    modImplementation 'net.fabricmc.fabric-api:fabric-api:' + project.fabricVersion
 }
 
 loom {
